@@ -1,240 +1,101 @@
 {
-	"name": "bracket-pair-colorizer",
-	"displayName": "Bracket Pair Colorizer",
-	"description": "A customizable extension for colorizing matching brackets",
-	"version": "1.0.61",
-	"publisher": "CoenraadS",
+	"name": "color-highlight",
+	"displayName": "Color Highlight",
+	"description": "Highlight web colors in your editor",
+	"version": "2.3.0",
+	"publisher": "naumovs",
 	"engines": {
-		"vscode": "^1.23.0"
+		"vscode": "^1.10.0"
 	},
-	"icon": "images/icon.png",
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
 		"*"
 	],
-	"keywords": [
-		"bracket",
-		"brackets",
-		"pair",
-		"color",
-		"colour",
-		"multi-root ready"
-	],
-	"galleryBanner": {
-		"color": "#1E1E1E",
-		"theme": "dark"
+	"scripts": {
+		"vscode:prepublish": "webpack",
+		"dev": "webpack -w",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
 	},
-	"main": "./out/src/extension",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/naumovs/vscode-ext-color-highlight/issues"
+	},
+	"homepage": "https://github.com/naumovs/vscode-ext-color-highlight",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/naumovs/vscode-ext-color-highlight.git"
+	},
+	"main": "./dist/extension",
+	"icon": "images/preview.png",
 	"contributes": {
-		"commands": [
-			{
-				"command": "bracket-pair-colorizer.expandBracketSelection",
-				"title": "Expand Bracket Selection"
-			},
-			{
-				"command": "bracket-pair-colorizer.undoBracketSelection",
-				"title": "Undo Bracket Selection"
-			}
-		],
 		"configuration": {
-			"type": "object",
-			"title": "BracketPair",
+			"title": "Color Highlight",
 			"properties": {
-				"bracketPairColorizer.timeOut": {
-					"type": "number",
-					"default": 200,
-					"description": "How long the user should idle for, before the document is colorized. Set to 0 to disable",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.forceUniqueOpeningColor": {
-					"type": "boolean",
-					"default": false,
-					"description": "Ensure that an opening brackets color does not match a previous brackets color",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.forceIterationColorCycle": {
-					"type": "boolean",
-					"default": false,
-					"description": "Should opening brackets iterate the color cycle even if they are not nested",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.colorMode": {
-					"type": "string",
-					"enum": [
-						"Consecutive",
-						"Independent"
-					],
-					"default": "Consecutive",
-					"description": "Should different brackets share a color group (Consecutive), or use their own color group (Independent)",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.highlightActiveScope": {
-					"type": "boolean",
-					"default": false,
-					"description": "Should the active scope brackets always be highlighted? Recommended to disable editor.matchBrackets if using this feature.",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.activeScopeCSS": {
-					"type": "array",
-					"default": [
-						"borderStyle : solid",
-						"borderWidth : 1px",
-						"borderColor : {color}; opacity: 0.5"
-					],
-					"description": "CSS for the active scope. Use {color} to match the bracket color. The string types listed at https://code.visualstudio.com/docs/extensionAPI/vscode-api#DecorationRenderOptions can be used",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.showBracketsInGutter": {
-					"type": "boolean",
-					"default": false,
-					"description": "Show active bracket scope in gutter?",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.showBracketsInRuler": {
-					"type": "boolean",
-					"default": false,
-					"description": "Show active bracket scope in ruler?",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.rulerPosition": {
-					"type": "string",
-					"enum": [
-						"Center",
-						"Full",
-						"Left",
-						"Right"
-					],
-					"default": "Center",
-					"description": "Show active bracket scope in ruler?",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.showVerticalScopeLine": {
-					"type": "boolean",
+				"color-highlight.enable": {
 					"default": true,
-					"description": "Show a vertical line on the left side of the editor representing the active bracket scope?",
-					"scope": "resource"
+					"description": "Controls if plugin is enabled",
+					"type": "boolean"
 				},
-				"bracketPairColorizer.showHorizontalScopeLine": {
-					"type": "boolean",
-					"default": true,
-					"description": "Show a horizontal line to create a block around the active bracket scope?",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.scopeLineRelativePosition": {
-					"type": "boolean",
-					"default": true,
-					"description": "True: Scope Line will start from the ending bracket position. False: Scope Line will always be at column 0",
-					"scope": "resource"
-				},
-				"bracketPairColorizer.scopeLineCSS": {
-					"type": "array",
+				"color-highlight.languages": {
 					"default": [
-						"borderStyle : solid",
-						"borderWidth : 1px",
-						"borderColor : {color}; opacity: 0.5"
+						"*"
 					],
-					"description": "CSS for the scope line. Use {color} to match the bracket color. The string types listed at https://code.visualstudio.com/docs/extensionAPI/vscode-api#DecorationRenderOptions can be used",
-					"scope": "resource"
+					"description": "An array of language ids which should be higlighted by Color Highlight. \"*\" to trigger on any language; Prepend language id with \"!\" to exclude the language (i.e \"!typescript\", \"!javascript\")",
+					"type": "array"
 				},
-				"bracketPairColorizer.consecutivePairColors": {
-					"type": "array",
-					"default": [
-						"()",
-						"[]",
-						"{}",
-						[
-							"TEAL",
-							"Orchid",
-							"Gold",
-							"LightSkyBlue",
-							"FUCHSIA",
-							"Lime",
-							"SILVER"
-						],
-						"Red"
-					],
-					"description": "Define paired characters and their shared color group",
-					"scope": "resource"
+				"color-highlight.matchWords": {
+					"default": false,
+					"description": "Highlight color words in all files (grey, green, etc.)",
+					"type": "boolean"
 				},
-				"bracketPairColorizer.independentPairColors": {
-					"type": [
-						"array"
-					],
-					"items": {
-						"type": [
-							"array"
-						]
-					},
-					"default": [
-						[
-							"()",
-							[
-								"Gold",
-								"Orchid",
-								"LightSkyBlue"
-							],
-							"Red"
-						],
-						[
-							"[]",
-							[
-								"Gold",
-								"Orchid",
-								"LightSkyBlue"
-							],
-							"Red"
-						],
-						[
-							"{}",
-							[
-								"Gold",
-								"Orchid",
-								"LightSkyBlue"
-							],
-							"Red"
-						]
-					],
-					"description": "Define paired characters and their color groups",
-					"scope": "resource"
+				"color-highlight.markerType": {
+					"default": "dot-before",
+					"description": "Style of the highlight. Can be 'dot-before', 'dot-after', 'foreground', 'background', 'outline', 'underline'",
+					"type": "string"
 				},
-				"bracketPairColorizer.excludedLanguages": {
-					"type": "array",
+				"color-highlight.markRuler": {
+					"default": false,
+					"description": "Highlight colors on the ruler (scroll bar), true/false",
+					"type": "boolean"
+				},
+				"color-highlight.sass.includePaths": {
 					"default": [],
-					"description": "Don't colorize files of these languages",
-					"scope": "window"
+					"description": "Array of absolute paths to search while perform file lookups.",
+					"type": "array"
 				}
 			}
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "tsc -p ./",
-		"compile": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
+		},
+		"commands": [
+			{
+				"command": "extension.colorHighlight",
+				"title": "Highlight colors in current file"
+			}
+		]
 	},
 	"devDependencies": {
 		"@types/mocha": "^2.2.32",
-		"@types/node": "^6.0.107",
-		"@types/prismjs": "^1.9.0",
+		"@types/node": "^6.0.40",
+		"babel-core": "^6.23.0",
+		"babel-eslint": "^7.2.1",
+		"babel-loader": "^7.0.0-beta.1",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.23.0",
+		"eslint": "^3.18.0",
 		"mocha": "^2.3.3",
-		"tslint": "^4.5.1",
-		"typescript": "^2.8.3",
-		"vscode": "^1.1.16"
+		"vscode": "^1.0.0",
+		"webpack": "^2.3.2"
 	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/CoenraadS/BracketPair"
-	},
-	"license": "SEE LICENSE IN LICENSE.md",
 	"dependencies": {
-		"escape-html": "^1.0.3",
-		"prismjs": "^1.15.0",
-		"vscode-uri": "^1.0.3"
+		"color": "^1.0.3",
+		"color-name": "^1.1.2",
+		"file-importer": "^1.0.0"
 	},
 	"__metadata": {
-		"id": "f583eafd-aa0d-4ccb-8f44-d1e610389660",
-		"publisherId": "d0a031ad-49a6-4982-aba0-6391e97e948b",
-		"publisherDisplayName": "CoenraadS"
+		"id": "121396ad-85a1-45ec-9fd1-d95028a847f5",
+		"publisherId": "e9a76d04-24d4-44eb-a202-964f71acf59e",
+		"publisherDisplayName": "Sergii Naumov"
 	}
 }
