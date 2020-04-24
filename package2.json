@@ -145,13 +145,12 @@
 						"[]",
 						"{}",
 						[
-							"TEAL",
+							"#FF7400",
 							"Orchid",
 							"Gold",
 							"LightSkyBlue",
 							"FUCHSIA",
 							"Lime",
-							"SILVER"
 						],
 						"Red"
 					],
