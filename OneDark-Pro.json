@@ -27,7 +27,7 @@
     "editorBracketMatch.background": "#515a6b",
     "editorBracketMatch.border": "#515a6b",
     "editorCursor.background": "#ffffffc9",
-    "editorCursor.foreground": "#528bff",
+    "editorCursor.foreground": "#3498DB",
     "editorError.foreground": "#c24038",
     "editorGroup.background": "#181a1f",
     "editorGroup.border": "#181a1f",
@@ -64,13 +64,13 @@
     "scrollbarSlider.hoverBackground": "#5a637580",
     "sideBar.background": "#21252b",
     "sideBarSectionHeader.background": "#282c34",
-    "statusBar.background": "#21252b",
+    "statusBar.background": "#7D3C98",
     "statusBar.debuggingBackground": "#cc6633",
     "statusBar.debuggingBorder": "#66017a",
     "statusBar.debuggingForeground": "#ffffff",
     "statusBar.foreground": "#9da5b4",
     "statusBar.noFolderBackground": "#21252b",
-    "statusBarItem.hoverBackground": "#2c313a",
+    "statusBarItem.hoverBackground": "#6C3483",
     "statusBarItem.remoteBackground": "#4d78cc",
     "statusBarItem.remoteForeground": "#f8fafd",
     "tab.activeBackground": "#282c34",
@@ -80,7 +80,7 @@
     "tab.inactiveBackground": "#21252b",
     "tab.unfocusedHoverBackground": "#323842",
     "terminal.ansiBlack": "#2d3139",
-    "terminal.ansiBlue": "#61afef",
+    "terminal.ansiBlue": "#3498DB",
     "terminal.ansiBrightBlack": "#7f848e",
     "terminal.ansiBrightBlue": "#528bff",
     "terminal.ansiBrightCyan": "#7067FF",
@@ -533,7 +533,7 @@
         "variable.parameter.function.js"
       ],
       "settings": {
-        "foreground": "#48B978"
+        "foreground": "#8AA158"
       }
     },
     {
@@ -542,7 +542,7 @@
         "meta.property.object"
       ],
       "settings": {
-        "foreground": "#48B978"
+        "foreground": "#8AA158"
       }
     },
     {
@@ -551,7 +551,7 @@
         "support.type.primitive"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#F3E477"
       }
     },
     {
@@ -1353,7 +1353,7 @@
       "name": "Variables",
       "scope": "variable",
       "settings": {
-        "foreground": "#48B978"
+        "foreground": "#95B948"
       }
     },
     {
