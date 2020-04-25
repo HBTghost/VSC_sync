@@ -88,13 +88,13 @@
     "terminal.ansiBrightMagenta": "#7e0097",
     "terminal.ansiBrightRed": "#f44747",
     "terminal.ansiBrightWhite": "#d7dae0",
-    "terminal.ansiBrightYellow": "#e5c07b",
+    "terminal.ansiBrightYellow": "#BC9449",
     "terminal.ansiCyan": "#7067FF",
     "terminal.ansiGreen": "#45B39D",
     "terminal.ansiMagenta": "#c678dd",
     "terminal.ansiRed": "#e06c75",
     "terminal.ansiWhite": "#d7dae0",
-    "terminal.ansiYellow": "#e5c07b",
+    "terminal.ansiYellow": "#BC9449",
     "terminal.foreground": "#c8c8c8",
     "textLink.foreground": "#61afef",
     "titleBar.activeBackground": "#282c34",
@@ -154,7 +154,7 @@
         "entity.name.scope-resolution.function.definition"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -217,7 +217,7 @@
         "beginning.punctuation.definition.quote.markdown.xi"
       ],
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
@@ -271,7 +271,7 @@
         "entity.name.function.xi"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -281,7 +281,7 @@
         "support.type.vb.asp"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -314,7 +314,7 @@
         "support.variable.semantic.hlsl"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -350,7 +350,7 @@
         "storage.modifier.import.groovy"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -359,7 +359,7 @@
         "source.makefile"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -377,7 +377,7 @@
         "source.ini"
       ],
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
@@ -414,7 +414,7 @@
         "entity.global.clojure"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -469,7 +469,7 @@
         "entity.name.package.go"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -479,7 +479,7 @@
         "keyword.operator.address.go"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -497,7 +497,7 @@
         "keyword.other.substitution.end"
       ],
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
@@ -506,7 +506,7 @@
         "keyword.other.substitution.begin"
       ],
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
@@ -515,7 +515,7 @@
         "keyword.other.template.end"
       ],
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
@@ -524,7 +524,7 @@
         "keyword.other.template.begin"
       ],
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
@@ -533,7 +533,7 @@
         "variable.parameter.function.js"
       ],
       "settings": {
-        "foreground": "#8AA158"
+        "foreground": "#ffffff"
       }
     },
     {
@@ -542,7 +542,7 @@
         "meta.property.object"
       ],
       "settings": {
-        "foreground": "#8AA158"
+        "foreground": "#ffffff"
       }
     },
     {
@@ -551,7 +551,7 @@
         "support.type.primitive"
       ],
       "settings": {
-        "foreground": "#F3E477"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -627,7 +627,7 @@
       "name": "cs storage type",
       "scope": "storage.type.cs",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -641,7 +641,7 @@
       "name": "ts primitive/builtin types",
       "scope": "support.type.primitive.ts,support.type.builtin.ts,support.type.primitive.tsx,support.type.builtin.tsx",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -774,7 +774,7 @@
       "name": "php types",
       "scope": "storage.type.php,meta.other.type.phpdoc.php,keyword.other.type.php,keyword.other.array.phpdoc.php",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -816,7 +816,7 @@
       "name": "use statement for other classes",
       "scope": "support.other.namespace.use.php,support.other.namespace.use-as.php,support.other.namespace.php,entity.other.alias.php,meta.interface.php",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -909,7 +909,7 @@
       "settings": {
         "foreground": "#ffffff"
       }
-    },
+    },>
     {
       "name": "Embedded",
       "scope": "punctuation.section.embedded.begin,punctuation.section.embedded.end",
@@ -928,14 +928,14 @@
       "name": "Escape Characters",
       "scope": "constant.character.escape",
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
       "name": "Regular Expressions",
       "scope": "string.regexp",
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
@@ -997,14 +997,14 @@
       "name": "[VSCODE-CUSTOM] Markdown Inline Raw",
       "scope": "markup.inline.raw.string.markdown",
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
       "name": "[VSCODE-CUSTOM] Markdown Inline Raw",
       "scope": "markup.inline.raw.markdown",
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#45B347"
       }
     },
     {
@@ -1060,7 +1060,7 @@
       "name": "Bold",
       "scope": "punctuation.definition.bold",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1162,14 +1162,14 @@
       "name": "Inherited Class",
       "scope": "entity.other.inherited-class",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
       "name": "Strings",
       "scope": "string",
       "settings": {
-        "foreground": "#45B39D"
+        "foreground": "#319E33"
       }
     },
     {
@@ -1211,7 +1211,7 @@
       "name": "Java Storage",
       "scope": "token.storage.type.java",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1260,7 +1260,7 @@
       "name": "Type Name",
       "scope": "entity.name.type",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1278,28 +1278,28 @@
         "variable.other.class.ts"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
       "name": "Class name",
       "scope": "entity.name.class.identifier.namespace.type",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
       "name": "Classes",
       "scope": "support.class, entity.name.type.class",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
       "name": "Classes",
       "scope": "entity.name.type.namespace",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1332,7 +1332,7 @@
       "name": "Java Imports",
       "scope": "import.storage.java",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1346,14 +1346,14 @@
       "name": "Language variables",
       "scope": "variable.language",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
       "name": "Variables",
       "scope": "variable",
       "settings": {
-        "foreground": "#95B948"
+        "foreground": "#3EAE84"
       }
     },
     {
@@ -1548,14 +1548,14 @@
       "name": "entity.name.type.module",
       "scope": "entity.name.type.module",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
       "name": "js/ts module",
       "scope": "support.module.node,support.type.object.module,support.module.node",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1639,7 +1639,7 @@
       "name": "java modifier.import",
       "scope": "storage.modifier.import.java,storage.type.java,storage.type.generic.java",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1670,14 +1670,14 @@
         "storage.type.object.array.java"
       ],
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
       "name": "js/ts variable.other.constant",
       "scope": "variable.other.constant",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1691,7 +1691,7 @@
       "name": "math js/ts",
       "scope": "support.constant.math",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1747,7 +1747,7 @@
       "name": "markup diff",
       "scope": "markup.changed.diff",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1803,7 +1803,7 @@
       "name": "entity.name.lifetime.rust",
       "scope": "entity.name.lifetime.rust",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
@@ -1824,7 +1824,7 @@
       "name": "variable.parameter.function.language.special.self.python",
       "scope": "variable.parameter.function.language.special.self.python",
       "settings": {
-        "foreground": "#e5c07b"
+        "foreground": "#BC9449"
       }
     },
     {
