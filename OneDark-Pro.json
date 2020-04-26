@@ -2,7 +2,7 @@
   "colors": {
     "activityBar.background": "#282c34",
     "activityBar.foreground": "#d7dae0",
-    "activityBarBadge.background": "#4d78cc",
+    "activityBarBadge.background": "#282c34",
     "activityBarBadge.foreground": "#f8fafd",
     "badge.background": "#282c34",
     "button.background": "#404754",
@@ -64,13 +64,13 @@
     "scrollbarSlider.hoverBackground": "#5a637580",
     "sideBar.background": "#21252b",
     "sideBarSectionHeader.background": "#282c34",
-    "statusBar.background": "#7D3C98",
+    "statusBar.background": "#4A70BB",
     "statusBar.debuggingBackground": "#cc6633",
     "statusBar.debuggingBorder": "#66017a",
     "statusBar.debuggingForeground": "#ffffff",
-    "statusBar.foreground": "#9da5b4",
+    "statusBar.foreground": "#dddddd",
     "statusBar.noFolderBackground": "#21252b",
-    "statusBarItem.hoverBackground": "#6C3483",
+    "statusBarItem.hoverBackground": "#4466AA",
     "statusBarItem.remoteBackground": "#4d78cc",
     "statusBarItem.remoteForeground": "#f8fafd",
     "tab.activeBackground": "#282c34",
@@ -80,9 +80,9 @@
     "tab.inactiveBackground": "#21252b",
     "tab.unfocusedHoverBackground": "#323842",
     "terminal.ansiBlack": "#2d3139",
-    "terminal.ansiBlue": "#3498DB",
+    "terminal.ansiBlue": "#4d78cc",
     "terminal.ansiBrightBlack": "#7f848e",
-    "terminal.ansiBrightBlue": "#528bff",
+    "terminal.ansiBrightBlue": "#3498DB",
     "terminal.ansiBrightCyan": "#7067FF",
     "terminal.ansiBrightGreen": "#45B39D",
     "terminal.ansiBrightMagenta": "#7e0097",
@@ -909,7 +909,7 @@
       "settings": {
         "foreground": "#ffffff"
       }
-    },>
+    },
     {
       "name": "Embedded",
       "scope": "punctuation.section.embedded.begin,punctuation.section.embedded.end",
@@ -1134,21 +1134,21 @@
       "name": "Constants",
       "scope": "punctuation.definition.constant",
       "settings": {
-        "foreground": "#d19a66"
+        "foreground": "#DB349C"
       }
     },
     {
       "name": "Constants",
       "scope": "constant",
       "settings": {
-        "foreground": "#d19a66"
+        "foreground": "#DB349C"
       }
     },
     {
       "name": "Integers",
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "#d19a66"
+        "foreground": "#DB349C"
       }
     },
     {
@@ -1253,7 +1253,7 @@
       "name": "Keyword Control",
       "scope": "keyword.control",
       "settings": {
-        "foreground": "#c678dd"
+        "foreground": "#CB69E8"
       }
     },
     {
@@ -1500,7 +1500,7 @@
       "name": "js console function",
       "scope": "entity.name.function,support.function.console",
       "settings": {
-        "foreground": "#61afef"
+        "foreground": "#34B0DB"
       }
     },
     {
